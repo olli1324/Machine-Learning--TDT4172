@@ -1,0 +1,120 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a third column x2 where x2 = x0 + x1
+train['x2'] = train['x0'] + train['x1']
+X_train = train[['x0', 'x1', 'x2']].values
+y_train = train['y'].values
+
+# Normalize the values by squaring
+X_train_N = np.square(X_train)
+
+# Plot before and after squaring
+fig, axs = plt.subplots(1, 2, figsize=(12, 5))
+
+# Before squaring
+scatter1 = axs[0].scatter(X_train[:, 0], X_train[:, 2], c=y_train, cmap='coolwarm', label='Original Data Points')
+axs[0].set_xlabel('x0', fontsize=14)
+axs[0].set_ylabel('x2 (x0 + x1)', fontsize=14)
+axs[0].set_title('Before Squaring', fontsize=16)
+axs[0].grid(True)
+axs[0].legend(*scatter1.legend_elements(), title="Classes")
+
+# After squaring
+scatter2 = axs[1].scatter(X_train_N[:, 0], X_train_N[:, 2], c=y_train, cmap='coolwarm', label='Squared Data Points')
+axs[1].set_xlabel('x0^2', fontsize=14)
+axs[1].set_ylabel('x2^2', fontsize=14)
+axs[1].set_title('After Squaring', fontsize=16)
+axs[1].grid(True)
+axs[1].legend(*scatter2.legend_elements(), title="Classes")
+
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Create a third column x2 where x2 = x0 + x1
+train['x2'] = train['x0'] + train['x1']
+X_train = train[['x0', 'x1', 'x2']].values
+y_train = train['y'].values
+
+# Plot the data in 3D
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plotting the data points with colors based on their classes
+scatter = ax.scatter(X_train[:, 0], X_train[:, 1], X_train[:, 2], c=y_train, cmap='coolwarm')
+
+# Labeling the axes
+ax.set_xlabel('x0', fontsize=14)
+ax.set_ylabel('x1', fontsize=14)
+ax.set_zlabel('x2 (x0 + x1)', fontsize=14)
+ax.set_title('3D Scatter Plot of x0, x1, and x2', fontsize=16)
+
+# Add legend
+legend = ax.legend(*scatter.legend_elements(), title="Classes")
+ax.add_artist(legend)
+
+plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a third column x2 where x2 = x0 + x1
+train['x2'] = train['x0'] + train['x1']
+X_train = train[['x0', 'x1', 'x2']].values
+y_train = train['y'].values
+
+# Normalize the values by squaring
+X_train_N = np.square(X_train)
+
+# Plot before and after squaring
+fig, axs = plt.subplots(1, 2, figsize=(12, 5))
+
+# Before squaring
+scatter1 = axs[0].scatter(X_train[:, 0], X_train[:, 2], c=y_train, cmap='coolwarm', label='Original Data Points')
+axs[0].set_xlabel('x0', fontsize=14)
+axs[0].set_ylabel('x2 (x0 + x1)', fontsize=14)
+axs[0].set_title('Before Squaring', fontsize=16)
+axs[0].grid(True)
+axs[0].legend(*scatter1.legend_elements(), title="Classes")
+
+# After squaring
+scatter2 = axs[1].scatter(X_train_N[:, 0], X_train_N[:, 2], c=y_train, cmap='coolwarm', label='Squared Data Points')
+axs[1].set_xlabel('x0^2', fontsize=14)
+axs[1].set_ylabel('x2^2', fontsize=14)
+axs[1].set_title('After Squaring', fontsize=16)
+axs[1].grid(True)
+axs[1].legend(*scatter2.legend_elements(), title="Classes")
+
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Create a third column x2 where x2 = x0 + x1
+train['x2'] = train['x0'] + train['x1']
+X_train = train[['x0', 'x1', 'x2']].values
+y_train = train['y'].values
+
+# Plot the data in 3D
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plotting the data points with colors based on their classes
+scatter = ax.scatter(X_train[:, 0], X_train[:, 1], X_train[:, 2], c=y_train, cmap='coolwarm')
+
+# Labeling the axes
+ax.set_xlabel('x0', fontsize=14)
+ax.set_ylabel('x1', fontsize=14)
+ax.set_zlabel('x2 (x0 + x1)', fontsize=14)
+ax.set_title('3D Scatter Plot of x0, x1, and x2', fontsize=16)
+
+# Add legend
+legend = ax.legend(*scatter.legend_elements(), title="Classes")
+ax.add_artist(legend)
+
+plt.show()
+
+
+plt.tight_layout()
+plt.show()
+
+plt.tight_layout()
+plt.show()
